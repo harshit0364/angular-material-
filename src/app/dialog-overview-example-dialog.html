@@ -1,0 +1,64 @@
+<div>
+<h1 mat-dialog-title   class="add-notes">Add Notes </h1>
+<span>
+<button mat-raised-button  align="end" class="closeButton " (click)="onNoClick()" ><i class="fa fa-times"></i></button>
+</span>
+</div>
+<div mat-dialog-content >
+  <p  class="notes-would-be-added">Notes would be added to the selected Deal</p>
+  <h4>SELECT DEAL </h4>
+  <mat-form-field>
+    <mat-select placeholder="Select ..." required >
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <h4>NOTES TYPE</h4>
+  <mat-form-field>
+    <mat-select placeholder="Select ..." required >
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<h5> NOTES</h5>
+  <textarea  class="rectangle"></textarea> 
+  <!-- <mat-form-field>
+    <!-- <mat-select   matNativeControl placeholder="Select..." [formControl]="dealControl" required> -->
+    <!-- <mat-option  matInput *ngFor="let deal of deals" [value]="deal">
+        {{deal.name}}
+      </mat-option> -->
+      <!-- <select matNativeControl required [formControl]="selectFormControl">
+      <option label="Select..."></option>
+      <option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+    </select>
+   
+    <mat-error *ngIf="dealControl.hasError('required')">Please choose an Deal </mat-error>
+  </mat-form-field> -->
+  
+  <!-- <h4>Notes Type</h4> -->
+  <!-- <mat-form-field>
+    <select matNativeControl required [formControl]="selectFormControl">
+      <option label="Select..."></option>
+      <option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+    </select>
+    <mat-error *ngIf="selectFormControl.hasError('required')">
+      Please chosse correct notes type
+    </mat-error>
+  </mat-form-field> -->
+  <!-- <h4>Notes</h4> -->
+   <!-- <mat-form-field >
+     <textarea class="rectangle"  ></textarea> 
+  </mat-form-field>  -->
+</div>
+<hr class="line">
+<div mat-dialog-actions align="end">
+  <button mat-raised-button class="button-bg-copy" (click)="onNoClick()" >Cancel</button>
+  <button mat-raised-button class="button-bg-copy-3" (click)="onNoClick()">Add</button>
+</div>
